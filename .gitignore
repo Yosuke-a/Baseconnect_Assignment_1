@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# .gitignore
+# buildフォルダを無視
+/build
+
+# node_modulesフォルダを無視
+/node_modules
+
+# その他の不要なファイルやフォルダを無視
+.DS_Store
+.env
