@@ -18,6 +18,7 @@ const options: Option[] = [
   { value: '医療・介護' },
 ];
 
+
 const Post: React.FC = () => {
   const [value, setValue] = useState<string>('');
   const [salary, setSalary] = useState<string>('');
@@ -39,8 +40,13 @@ const Post: React.FC = () => {
   
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    // You can handle form submission logic here (e.g., saving the post)
-    navigate('/');
+    navigate('/', {
+      state: {
+        category: value || "未設定",
+        salary: salary || "未設定",
+        title: title || "未設定",
+      },
+    });
   };
 
   return (
